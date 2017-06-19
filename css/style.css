@@ -1,0 +1,41 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+ul li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color:#000;
+}
+.nav {
+	font-size: 0;
+	position: relative;
+}
+.nav li{
+	display: inline-block;
+	font-size: 14px;
+	background: #ccc;
+}
+.nav li a{
+	position: relative;
+	padding: 10px 20px;
+	display: block;
+	font-size: 14px;
+	z-index: 100;
+}
+ li.on{
+	background: orange;
+}
+li.bg{
+	
+	height: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background: orange;
+	text-transform: uppercase;
+}

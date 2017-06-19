@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.11.3.js"></script>
+	<script>
+		$(function(){
+			var init_left = $("li.on").position().left;
+				// console.log(init_left)
+				$("li.bg").css("left",init_left+"px")
+
+			$(".nav li").mouseover(function(){
+
+				var curr_width = $(this).width();
+				var curr_left = $(this).position().left;
+
+				// $(".nav .bg").css("width",curr_width);
+				// $(".nav .bg").css("left",curr_left);	
+
+				$(".nav .bg").stop().animate({
+					"width":curr_width,
+					"left":curr_left
+				})
+			})
+			$(".nav li").mouseleave(function(){
+
+				$(".nav .bg").stop().animate({
+					// "width":0,
+					"left":init_left
+				})
+			})
+		})
+	</script>
+</head>
+<body>
+	<ul class="nav">
+		<li><a href="">首页</a></li>
+		<li><a href="">课程栏</a></li>
+		<li class="on"><a href="">学习社区</a></li>
+		<li><a href="">社区</a></li>
+		<li><a href="">联系我们</a></li>
+		<li class="bg"></li>
+	</ul>
+</body>
+</html>
